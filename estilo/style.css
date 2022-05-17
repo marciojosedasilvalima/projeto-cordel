@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --fonte1: Verdana, 'Geneva', Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+* {
+    margin: 0px;
+    padding:0px;
+    font-size: 1em;
+}
+
+html, body {
+    min-height: 100vh; /* vh (viewport height) utiliza a altura da viewport */
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /* Letras maiusculas */
+    font-family: var(--fonte2);
+    font-size: 10vw; /* vw (viewport width) utiliza a largura da viewport */    
+}
+
+header > p {
+    padding-bottom: 50px;      
+}
+
+header a, footer a { /* Para o cabeçalho e rodapé */
+    color: white;
+    text-decoration: none; /* Tira sublinhado */
+    font-weight: bolder; /* Negrito */
+}
+
+header a:hover, footer a:hover { /* Para o cabeçalho e rodapé */
+    text-decoration: underline; /* Passo o mouse por cima sublinhar */
+}
+
+section {
+    padding-top: 10vh; /* 10% da viewport da section do topo */
+    padding-bottom: 10vh; /* 10% da viewport da section de baixo */
+    line-height: 2em; /* espaçamento entre as linhas */
+    padding-left: 30px;
+    font-family: var(--fonte3);  
+    font-size: 3.5vw;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(119, 117, 117);
+    color: white;
+    box-shadow: inset 6px 6px 13px rgba(0, 0, 0, 0.473); /* Sombra interna */
+    background-size: cover; /* Melhora o tamanho, fica mais organizado */
+    background-attachment: fixed;
+}
+
+section.imagem > p {
+   display: inline-block; /* a caixa se adapta ao tamanho do texto */
+   background-color: rgba(0, 0, 0, 0.514);
+   padding: 15px;
+   text-shadow: 1px 1px 0px black; /* Sombra no texto */ 
+}
+
+section#img01 {
+    background-image: url("../imagens/background001.jpg");
+    background-position: right center;    
+}
+
+section#img02 {
+    background-image: url("../imagens/background002.jpg");
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
